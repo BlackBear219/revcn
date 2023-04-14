@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://revcn.mysql.database.azure.com:3306/revcn_dev?useSSL=true
+    username: revcn_admin
+    password: "RW0917jqw"
+    driver-class-name: com.mysql.cj.jdbc.Driver
