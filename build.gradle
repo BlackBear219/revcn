@@ -18,7 +18,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.3'
 	implementation 'org.apache.httpcomponents.client5:httpclient5:5.2.1'
-	implementation 'org.json:json:20230227'
+	implementation 'com.github.yitter:yitter-idgenerator:1.0.6'
 }
 
 tasks.named('test') {

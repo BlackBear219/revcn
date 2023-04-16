@@ -1,22 +1,38 @@
 package net.revcn.domain;
 
-import java.util.Date;
+import java.time.Instant;
+
 import org.springframework.stereotype.Component;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import net.revcn.model.MetricType;
 
 @Component
 public class Metric {
 
+    @TableId(type=IdType.ASSIGN_ID)
     private Long metricId;
 
     private MetricType metricType;
 
-    private Date timestamp;
+    private Instant snapshotTime;
 
     private Double value;
 
     private Long deleted;
 
+    public Metric() {
+        this.deleted = 0L;
+    }
+
+    public Metric(MetricType metricType, Instant snapshotTime, Double value) {
+        this();
+        this.metricType = metricType;
+        this.snapshotTime = snapshotTime;
+        this.value = value;
+    }
 
     public Long getMetricId() {
         return this.metricId;
@@ -30,12 +46,12 @@ public class Metric {
         this.metricType = metricType;
     }
 
-    public Date getTimestamp() {
-        return this.timestamp;
+    public Instant getTimestamp() {
+        return this.snapshotTime;
     }
 
-    public void setTimestamp(Date timestamp) {
-        this.timestamp = timestamp;
+    public void setTimestamp(Instant snapshotTime) {
+        this.snapshotTime = snapshotTime;
     }
 
     public Double getValue() {
