@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import net.revcn.dao.MetricDao;
-
 import net.revcn.domain.Metric;
 import net.revcn.model.MetricType;
 
